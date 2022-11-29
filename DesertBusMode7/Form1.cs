@@ -34,7 +34,7 @@ namespace DesertBusMode7
         double worldy = 0.01;
         double worlda = 1.55;
         double fnear = 0.01;
-        double ffar = 0.4;
+        double ffar = 0.3;
         double fovhalf = 3.1415 / 4;
         double ffarx1;
         double ffary1;
@@ -67,16 +67,16 @@ namespace DesertBusMode7
         private void Mode7Render()
         {
             ffarx1 = (worldx + (Math.Cos(worlda - fovhalf)) * ffar);
-            ffary1 = (worldy + (Math.Sin(worlda - fovhalf)) * ffar);
+            ffary1 = (worldy + (Math.Sin(worlda - fovhalf)) * ffar)*0.2;
 
             ffarx2 = (worldx + (Math.Cos(worlda + fovhalf)) * ffar);
-            ffary2 = (worldy + (Math.Sin(worlda + fovhalf)) * ffar);
+            ffary2 = (worldy + (Math.Sin(worlda + fovhalf)) * ffar)*0.2;
 
-            fnearx1 = worldx + (Math.Cos(worlda - fovhalf)) * fnear;
-            fneary1 = worldy + (Math.Sin(worlda - fovhalf)) * fnear;
+            fnearx1 = (worldx + (Math.Cos(worlda - fovhalf)) * fnear);
+            fneary1 = (worldy + (Math.Sin(worlda - fovhalf)) * fnear)*0.2;
 
-            fnearx2 = worldx + (Math.Cos(worlda + fovhalf)) * fnear;
-            fneary2 = worldy + (Math.Sin(worlda + fovhalf)) * fnear;
+            fnearx2 = (worldx + (Math.Cos(worlda + fovhalf)) * fnear);
+            fneary2 = (worldy + (Math.Sin(worlda + fovhalf)) * fnear)*0.2;
 
             
 
@@ -197,13 +197,13 @@ namespace DesertBusMode7
 
         private void timerRender_Tick(object sender, EventArgs e)
         {
-            if (GasPedal== true && BusSpeed < 0.05)
+            if (GasPedal== true && BusSpeed < 0.20)
             {
-                BusSpeed += 0.002;
+                BusSpeed += 0.01;
             }
             if(GasPedal == false && BusSpeed > 0.00)
             {
-                BusSpeed -= 0.0005;
+                BusSpeed -= 0.002;
             }
 
 
@@ -214,7 +214,7 @@ namespace DesertBusMode7
             {
                 worldy = 0.99;
             }
-            else if (worldy > 1.00)
+            else if (worldy > 5.00)
             {
                 worldy = 0.01;
                 PlaneMap1 = PlaneMap2;
@@ -225,12 +225,24 @@ namespace DesertBusMode7
                 PlaneMap6 = PlaneMap7;
                 PlaneMap7 = PlaneMap8;
 
-                switch (rnd.Next(1, 2)){
+                switch (rnd.Next(1, 8)){
                     case 1:
-                        PlaneMap8 = RainbowRoadMain;
+                        PlaneMap8 = KoopaBeachMain;
                         break;
                     case 2:
-                        PlaneMap8 = Desert2;
+                        PlaneMap8 = BowserCastleMain;
+                        break;
+                    case 3:
+                        PlaneMap8 = ChocoMtMain;
+                        break;
+                    case 4:
+                        PlaneMap8 = GhostValleyMain;
+                        break;
+                    case 5:
+                        PlaneMap8 = VanillaLakeMain;
+                        break;
+                    case 6:
+                        PlaneMap8 = RainbowRoadMain;
                         break;
                     default:
                         PlaneMap8 = DesertMain;
