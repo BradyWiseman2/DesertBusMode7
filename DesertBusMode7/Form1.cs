@@ -32,6 +32,15 @@ namespace DesertBusMode7
         Bitmap Luigi = new Bitmap(Properties.Resources.Luigi);
         Bitmap LuigiRight = new Bitmap(Properties.Resources.LuigiRight);
         Bitmap LuigiLeft = new Bitmap(Properties.Resources.LuigiLeft);
+        Bitmap S1 = new Bitmap(Properties.Resources.S1);
+        Bitmap S2 = new Bitmap(Properties.Resources.S2);
+        Bitmap S3 = new Bitmap(Properties.Resources.S3);
+        Bitmap S4 = new Bitmap(Properties.Resources.S4);
+        Bitmap S5 = new Bitmap(Properties.Resources.S5);
+        Bitmap S6 = new Bitmap(Properties.Resources.S6);
+        Bitmap S7 = new Bitmap(Properties.Resources.S7);
+        Bitmap S8 = new Bitmap(Properties.Resources.S8);
+        Bitmap S9 = new Bitmap(Properties.Resources.S9);
 
 
         double worldx = 0.5;
@@ -55,6 +64,7 @@ namespace DesertBusMode7
         double BusSpeed;
         double BusDrift;
         int TimeDriven; //in Minutes
+        int SpinoutFrame = 1;
 
 
 
@@ -287,6 +297,58 @@ namespace DesertBusMode7
                     Mode7Render();           
                     break;
                 case 3:
+                    if (BusSpeed > 0.00)
+                    {
+                        BusSpeed -= 0.002;
+                    }
+                    worldy += BusSpeed;
+                    switch (SpinoutFrame)
+                    {
+                        case 1:
+                            Sprite = S1;
+                            SpinoutFrame++;
+                            break;
+                        case 2:
+                            Sprite = S2;
+                            SpinoutFrame++;
+                            break;
+                        case 3:
+                            Sprite = S3;
+                            SpinoutFrame++;
+                            break;
+                        case 4:
+                            Sprite = S4;
+                            SpinoutFrame++;
+                            break;
+                        case 5:
+                            Sprite = S5;
+                            SpinoutFrame++;
+                            break;
+                        case 6:
+                            Sprite = S6;
+                            SpinoutFrame++;
+                            break;
+                        case 7:
+                            Sprite = S7;
+                            SpinoutFrame++;
+                            break;
+                        case 8:
+                            Sprite = S8;
+                            SpinoutFrame++;
+                            break;
+                        case 9:
+                            Sprite = S9;
+                            SpinoutFrame++;
+                            break;
+                    }
+
+                    Mode7Render();
+
+
+
+
+
+
                     break;
 
 
