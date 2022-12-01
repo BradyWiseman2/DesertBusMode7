@@ -63,16 +63,6 @@ namespace DesertBusMode7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Background {
-            get {
-                object obj = ResourceManager.GetObject("Background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BowserCastleMain {
             get {
                 object obj = ResourceManager.GetObject("BowserCastleMain", resourceCulture);
@@ -86,26 +76,6 @@ namespace DesertBusMode7.Properties {
         internal static System.Drawing.Bitmap ChocoMtMain {
             get {
                 object obj = ResourceManager.GetObject("ChocoMtMain", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Desert1 {
-            get {
-                object obj = ResourceManager.GetObject("Desert1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Desert2 {
-            get {
-                object obj = ResourceManager.GetObject("Desert2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +113,36 @@ namespace DesertBusMode7.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Luigi {
+            get {
+                object obj = ResourceManager.GetObject("Luigi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LuigiLeft {
+            get {
+                object obj = ResourceManager.GetObject("LuigiLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LuigiRight {
+            get {
+                object obj = ResourceManager.GetObject("LuigiRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RainbowRoadMain {
             get {
                 object obj = ResourceManager.GetObject("RainbowRoadMain", resourceCulture);
@@ -156,16 +156,6 @@ namespace DesertBusMode7.Properties {
         internal static System.Drawing.Bitmap smk {
             get {
                 object obj = ResourceManager.GetObject("smk", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Untitled_1__1__1_ {
-            get {
-                object obj = ResourceManager.GetObject("Untitled_1__1__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

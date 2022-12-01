@@ -22,14 +22,18 @@ namespace DesertBusMode7
         Bitmap Render = new Bitmap(250, 250);                            //of doing this but I can't
                                                                          //spend all my time working
         Bitmap DesertMain = new Bitmap(Properties.Resources.DesertMain); //on the graphics
-        Bitmap Desert1 = new Bitmap(Properties.Resources.Desert1);
-        Bitmap Desert2 = new Bitmap(Properties.Resources.Desert2);
         Bitmap KoopaBeachMain = new Bitmap(Properties.Resources.KoopaBeachMain);
         Bitmap ChocoMtMain = new Bitmap(Properties.Resources.ChocoMtMain);
         Bitmap VanillaLakeMain = new Bitmap(Properties.Resources.VanillaLakeMain);
         Bitmap GhostValleyMain = new Bitmap(Properties.Resources.GhostValleyMain);
         Bitmap BowserCastleMain = new Bitmap(Properties.Resources.BowserCastleMain);
         Bitmap RainbowRoadMain = new Bitmap(Properties.Resources.RainbowRoadMain);
+        Bitmap Sprite = new Bitmap(Properties.Resources.Luigi);
+        Bitmap Luigi = new Bitmap(Properties.Resources.Luigi);
+        Bitmap LuigiRight = new Bitmap(Properties.Resources.LuigiRight);
+        Bitmap LuigiLeft = new Bitmap(Properties.Resources.LuigiLeft);
+
+
         double worldx = 0.5;
         double worldy = 0.01;
         double worlda = 1.55;
@@ -44,10 +48,10 @@ namespace DesertBusMode7
         double fneary1;
         double fnearx2;
         double fneary2;
-
         //The following variables are more game related, including the speed of the bus,
         //how long you've been driving, ect.
         bool GasPedal;
+        int GameState = 1;
         double BusSpeed;
         double BusDrift;
         int TimeDriven; //in Minutes
@@ -59,28 +63,28 @@ namespace DesertBusMode7
 
         public Form1()
         {
-            InitializeComponent();   
+            InitializeComponent();
             Mode7Render();
         }
 
-       
+
         private void Mode7Render()
         {
             ffarx1 = (worldx + (Math.Cos(worlda - fovhalf)) * ffar);
-            ffary1 = (worldy + (Math.Sin(worlda - fovhalf)) * ffar)*0.2;
+            ffary1 = (worldy + (Math.Sin(worlda - fovhalf)) * ffar) * 0.2;
 
             ffarx2 = (worldx + (Math.Cos(worlda + fovhalf)) * ffar);
-            ffary2 = (worldy + (Math.Sin(worlda + fovhalf)) * ffar)*0.2;
+            ffary2 = (worldy + (Math.Sin(worlda + fovhalf)) * ffar) * 0.2;
 
             fnearx1 = (worldx + (Math.Cos(worlda - fovhalf)) * fnear);
-            fneary1 = (worldy + (Math.Sin(worlda - fovhalf)) * fnear)*0.2;
+            fneary1 = (worldy + (Math.Sin(worlda - fovhalf)) * fnear) * 0.2;
 
             fnearx2 = (worldx + (Math.Cos(worlda + fovhalf)) * fnear);
-            fneary2 = (worldy + (Math.Sin(worlda + fovhalf)) * fnear)*0.2;
+            fneary2 = (worldy + (Math.Sin(worlda + fovhalf)) * fnear) * 0.2;
 
-            
 
-            for (int y = 0; y < Render.Height-120; y+=2)
+
+            for (int y = 0; y < Render.Height - 50; y += 2)
             {
                 double depth = ((double)y / ((double)Render.Height));
 
@@ -88,7 +92,7 @@ namespace DesertBusMode7
                 double fstartY = ((ffary1 - fneary1) / (depth)) + fneary1;
                 double fendX = ((ffarx2 - fnearx2) / (depth)) + fnearx2;
                 double fendY = ((ffary2 - fneary2) / (depth)) + fneary2;
-                for (int x = 0; x < Render.Width; x+=1)
+                for (int x = 0; x < Render.Width; x += 1)
                 {
                     double width = ((double)x / ((double)Render.Width));
 
@@ -104,51 +108,51 @@ namespace DesertBusMode7
                     }
 
 
-                    switch((int)Math.Floor((double)pixel2/PlaneMap1.Height))
+                    switch ((int)Math.Floor((double)pixel2 / PlaneMap1.Height))
                     {
                         case 0:
                             Render.SetPixel(x, y, PlaneMap1.GetPixel(pixel1, pixel2));
-                            Render.SetPixel(x, y+1, PlaneMap1.GetPixel(pixel1, pixel2));
+                            Render.SetPixel(x, y + 1, PlaneMap1.GetPixel(pixel1, pixel2));
                             break;
                         case 1:
                             pixel2 = pixel2 - (PlaneMap1.Height);
                             Render.SetPixel(x, y, PlaneMap2.GetPixel(pixel1, pixel2));
-                            Render.SetPixel(x, y+1, PlaneMap2.GetPixel(pixel1, pixel2));
+                            Render.SetPixel(x, y + 1, PlaneMap2.GetPixel(pixel1, pixel2));
                             break;
                         case 2:
                             pixel2 = pixel2 - (PlaneMap1.Height * 2);
                             Render.SetPixel(x, y, PlaneMap3.GetPixel(pixel1, pixel2));
-                            Render.SetPixel(x, y+1, PlaneMap3.GetPixel(pixel1, pixel2));
+                            Render.SetPixel(x, y + 1, PlaneMap3.GetPixel(pixel1, pixel2));
                             break;
                         case 3:
                             pixel2 = pixel2 - (PlaneMap1.Height * 3);
                             Render.SetPixel(x, y, PlaneMap4.GetPixel(pixel1, pixel2));
-                            Render.SetPixel(x, y+1, PlaneMap4.GetPixel(pixel1, pixel2));
+                            Render.SetPixel(x, y + 1, PlaneMap4.GetPixel(pixel1, pixel2));
                             break;
                         case 4:
                             pixel2 = pixel2 - (PlaneMap1.Height * 4);
                             Render.SetPixel(x, y, PlaneMap5.GetPixel(pixel1, pixel2));
-                            Render.SetPixel(x, y+1, PlaneMap5.GetPixel(pixel1, pixel2));
+                            Render.SetPixel(x, y + 1, PlaneMap5.GetPixel(pixel1, pixel2));
                             break;
                         case 5:
                             pixel2 = pixel2 - (PlaneMap1.Height * 5);
                             Render.SetPixel(x, y, PlaneMap6.GetPixel(pixel1, pixel2));
-                            Render.SetPixel(x, y+1, PlaneMap6.GetPixel(pixel1, pixel2));
+                            Render.SetPixel(x, y + 1, PlaneMap6.GetPixel(pixel1, pixel2));
                             break;
                         case 6:
                             pixel2 = pixel2 - (PlaneMap1.Height * 6);
                             Render.SetPixel(x, y, PlaneMap7.GetPixel(pixel1, pixel2));
-                            Render.SetPixel(x, y+1, PlaneMap7.GetPixel(pixel1, pixel2));
+                            Render.SetPixel(x, y + 1, PlaneMap7.GetPixel(pixel1, pixel2));
                             break;
                         case 7:
                             pixel2 = pixel2 - (PlaneMap1.Height * 7);
                             Render.SetPixel(x, y, PlaneMap8.GetPixel(pixel1, pixel2));
-                            Render.SetPixel(x, y+1, PlaneMap8.GetPixel(pixel1, pixel2));
+                            Render.SetPixel(x, y + 1, PlaneMap8.GetPixel(pixel1, pixel2));
                             break;
                         default:
                             pixel2 = pixel2 - (144 * ((int)Math.Floor((double)pixel2 / 144)));
                             Render.SetPixel(x, y, PlaneMap8.GetPixel(pixel1, pixel2));
-                            Render.SetPixel(x, y+1, PlaneMap8.GetPixel(pixel1, pixel2));
+                            Render.SetPixel(x, y + 1, PlaneMap8.GetPixel(pixel1, pixel2));
                             break;
 
 
@@ -156,9 +160,20 @@ namespace DesertBusMode7
 
                     }
 
-                  
+
                 }
             }
+
+            using (Graphics g = Graphics.FromImage(Render))
+            {
+
+
+                int y = rnd.Next(140, 142);
+
+                g.DrawImage(Sprite, new Point(115, y));
+
+            }
+
             pBoxRender.Image = Render;
 
         }
@@ -168,13 +183,20 @@ namespace DesertBusMode7
             switch (e.KeyCode)
             {
                 case Keys.Up:
-                   GasPedal = true;
+                    GasPedal = true;
+                    if (GameState == 1)
+                    {
+                        BusSpeed = 0.001;
+                        GameState = 2;                       
+                    }                    
                     break;
                 case Keys.Left:
                     BusDrift = -0.005;
+                    Sprite = LuigiLeft;
                     break;
                 case Keys.Right:
                     BusDrift = 0.005;
+                    Sprite = LuigiRight;
                     break;
             }
         }
@@ -188,77 +210,92 @@ namespace DesertBusMode7
                     break;
                 case Keys.Left:
                     BusDrift = 0.0008;
+                    Sprite = Luigi;
                     break;
                 case Keys.Right:
                     BusDrift = 0.0008;
+                    Sprite = Luigi;
                     break;
             }
         }
 
         private void timerRender_Tick(object sender, EventArgs e)
         {
-            if (GasPedal== true && BusSpeed < 0.20)
+            switch (GameState)
             {
-                BusSpeed += 0.01;
-            }
-            if(GasPedal == false && BusSpeed > 0.00)
-            {
-                BusSpeed -= 0.002;
-            }
+                case 1:
+                    break;
+                case 2:
+                    if (GasPedal == true && BusSpeed < 0.15)
+                    {
+                        BusSpeed += 0.01;
+                    }
+                    if (GasPedal == false && BusSpeed > 0.00)
+                    {
+                        BusSpeed -= 0.002;
+                    }
 
 
-            worldy += BusSpeed;
-            worldx -= BusDrift;
-            
-            if (worldy < 0.00)
-            {
-                worldy = 0.99;
-            }
-            else if (worldy > 5.00)
-            {
-                worldy = 0.01;
-                PlaneMap1 = PlaneMap2;
-                PlaneMap2 = PlaneMap3;
-                PlaneMap3 = PlaneMap4;
-                PlaneMap4 = PlaneMap5;
-                PlaneMap5 = PlaneMap6;
-                PlaneMap6 = PlaneMap7;
-                PlaneMap7 = PlaneMap8;
+                    worldy += BusSpeed;
+                    worldx -= BusDrift;
 
-                switch (rnd.Next(1, 8)){
-                    case 1:
-                        PlaneMap8 = KoopaBeachMain;
-                        break;
-                    case 2:
-                        PlaneMap8 = BowserCastleMain;
-                        break;
-                    case 3:
-                        PlaneMap8 = ChocoMtMain;
-                        break;
-                    case 4:
-                        PlaneMap8 = GhostValleyMain;
-                        break;
-                    case 5:
-                        PlaneMap8 = VanillaLakeMain;
-                        break;
-                    case 6:
-                        PlaneMap8 = RainbowRoadMain;
-                        break;
-                    default:
-                        PlaneMap8 = DesertMain;
-                        break;
-                }
+                    if (worldx > 0.72 || worldx < 0.28 || BusSpeed <= 0)
+                    {
+                        GameState = 3;
+                    }
+
+                    if (worldy < 0.00)
+                    {
+                        worldy = 0.99;
+                    }
+                    else if (worldy > 5.00)
+                    {
+                        worldy = 0.01;
+                        PlaneMap1 = PlaneMap2;
+                        PlaneMap2 = PlaneMap3;
+                        PlaneMap3 = PlaneMap4;
+                        PlaneMap4 = PlaneMap5;
+                        PlaneMap5 = PlaneMap6;
+                        PlaneMap6 = PlaneMap7;
+                        PlaneMap7 = PlaneMap8;
+
+                        switch (rnd.Next(1, 8))
+                        {
+                            case 1:
+                                PlaneMap8 = KoopaBeachMain;
+                                break;
+                            case 2:
+                                PlaneMap8 = BowserCastleMain;
+                                break;
+                            case 3:
+                                PlaneMap8 = ChocoMtMain;
+                                break;
+                            case 4:
+                                PlaneMap8 = GhostValleyMain;
+                                break;
+                            case 5:
+                                PlaneMap8 = VanillaLakeMain;
+                                break;
+                            case 6:
+                                PlaneMap8 = RainbowRoadMain;
+                                break;
+                            default:
+                                PlaneMap8 = DesertMain;
+                                break;
+                        }
+                    }
+                    Mode7Render();           
+                    break;
+                case 3:
+                    break;
+
+
             }
-            if (worldx > 1.00)
-            {
-                worldx = 0.01;
-            }
-            else if (worldx < 0.00)
-            {
-                worldx = 0.99;
-            }
-            Mode7Render();
+
         }
-     
     }
 }
+     
+    
+
+

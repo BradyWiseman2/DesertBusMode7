@@ -121,20 +121,8 @@
   <data name="DesertMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DesertMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Desert2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Desert2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="smk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Desert1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Desert1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Untitled_1__1__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled(1)(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BowserCastleMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BowserCastleMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,5 +141,14 @@
   </data>
   <data name="VanillaLakeMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VanillaLakeMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Luigi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luigi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LuigiLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LuigiLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LuigiRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LuigiRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
