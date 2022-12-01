@@ -65,6 +65,7 @@ namespace DesertBusMode7
         double BusDrift;
         int TimeDriven; //in Minutes
         int SpinoutFrame = 1;
+        int FrameDir = 1;
 
 
 
@@ -213,20 +214,22 @@ namespace DesertBusMode7
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
-                case Keys.Up:
-                    GasPedal = false;
-                    break;
-                case Keys.Left:
-                    BusDrift = 0.0008;
-                    Sprite = Luigi;
-                    break;
-                case Keys.Right:
-                    BusDrift = 0.0008;
-                    Sprite = Luigi;
-                    break;
-            }
+           
+                switch (e.KeyCode)
+                {
+                    case Keys.Up:
+                        GasPedal = false;
+                        break;
+                    case Keys.Left:
+                        BusDrift = 0.0008;
+                        Sprite = Luigi;
+                        break;
+                    case Keys.Right:
+                        BusDrift = 0.0008;
+                        Sprite = Luigi;
+                        break;
+                }
+            
         }
 
         private void timerRender_Tick(object sender, EventArgs e)
@@ -296,58 +299,63 @@ namespace DesertBusMode7
                     }
                     Mode7Render();           
                     break;
-                case 3:
+                case 3:           
                     if (BusSpeed > 0.00)
                     {
-                        BusSpeed -= 0.002;
+                        BusSpeed -= 0.004;
                     }
                     worldy += BusSpeed;
+                    worldx -= BusDrift;
+                    if (BusDrift > 0)
+                    {
+                        BusDrift -= 0.0001;
+                    }
+                    else if (BusDrift < 0)
+                    {
+                        BusDrift += 0.0001;
+                    }
                     switch (SpinoutFrame)
                     {
+                        case 0:
+                            Sprite = Luigi;
+                            FrameDir = 1;
+                            SpinoutFrame += FrameDir;
+                            break;
                         case 1:
-                            Sprite = S1;
-                            SpinoutFrame++;
+                            Sprite = S1;                                                       
+                            Sprite.RotateFlip(RotateFlipType.RotateNoneFlipX);                            
+                            SpinoutFrame += FrameDir;                           
                             break;
                         case 2:
-                            Sprite = S2;
-                            SpinoutFrame++;
+                            Sprite = S3;
+                            Sprite.RotateFlip(RotateFlipType.RotateNoneFlipX);                            
+                            SpinoutFrame += FrameDir;
                             break;
                         case 3:
-                            Sprite = S3;
-                            SpinoutFrame++;
+                            Sprite = S5;                                                  
+                            Sprite.RotateFlip(RotateFlipType.RotateNoneFlipX);                            
+                            SpinoutFrame += FrameDir;
                             break;
                         case 4:
-                            Sprite = S4;
-                            SpinoutFrame++;
+                            Sprite = S7;                                                
+                            Sprite.RotateFlip(RotateFlipType.RotateNoneFlipX);                            
+                            SpinoutFrame += FrameDir;
                             break;
                         case 5:
-                            Sprite = S5;
-                            SpinoutFrame++;
-                            break;
-                        case 6:
-                            Sprite = S6;
-                            SpinoutFrame++;
-                            break;
-                        case 7:
-                            Sprite = S7;
-                            SpinoutFrame++;
-                            break;
-                        case 8:
-                            Sprite = S8;
-                            SpinoutFrame++;
-                            break;
-                        case 9:
                             Sprite = S9;
-                            SpinoutFrame++;
+                            FrameDir = -1;
+                            SpinoutFrame += FrameDir;                        
                             break;
+                      
+                    }
+
+                    if (BusSpeed <= 0)
+                    {
+                        SpinoutFrame = -1;
+                        
                     }
 
                     Mode7Render();
-
-
-
-
-
 
                     break;
 

@@ -151,10 +151,10 @@
   <data name="LuigiRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LuigiRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="S1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="S2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\S2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="S2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="S1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\S1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="S3" type="System.Resources.ResXFileRef, System.Windows.Forms">
