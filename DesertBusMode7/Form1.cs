@@ -63,8 +63,9 @@ namespace DesertBusMode7
         //how long you've been driving, ect.
         bool GasPedal;
         int GameState = 0;
-        double BusSpeed;
-        double BusDrift;
+        double BusSpeed; //These are called Bus because of earlier plans but they apply to the kart
+        double BusDrift; //the same way
+
         int TimeDriven; //in Seconds
         bool Forward;
         bool Back;
@@ -104,9 +105,9 @@ namespace DesertBusMode7
             pBoxTitle.Visible = false;
             ffar = 0.35;
             worlda = 1.55;
-            GameState = 5;
+            GameState = 5;//makes all ui elements invisible, then enables the map viewer controls
         }
-        private void MapChange(int Mapset)
+        private void MapChange(int Mapset)  //Changes the maps used to new ones every hour
         {
             switch (Mapset)
             {
@@ -193,7 +194,8 @@ namespace DesertBusMode7
 
 
 
-            for (int y = 0; y < Render.Height; y += 2)
+            for (int y = 0; y < Render.Height; y += 2) //These 2 for loops combined will run for
+                                                       //every pixel in the Render bitmap, so 250x250
             {
                 double depth = ((double)y / ((double)Render.Height));
 
@@ -257,7 +259,8 @@ namespace DesertBusMode7
 
                 }
             }
-            if (GameState != 0 && GameState != 5 )
+            if (GameState != 0 && GameState != 5 ) // If the gamestate isn't main menu or map viewer,
+                                                   //display Luigi
             {
                 using (Graphics g = Graphics.FromImage(Render))
                 {
@@ -283,7 +286,7 @@ namespace DesertBusMode7
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
 
-            switch (GameState)
+            switch (GameState) //tests what state the game is in, and uses the appropriate controls
             {
 
                 case 1:
@@ -406,7 +409,7 @@ namespace DesertBusMode7
                     Mode7Render();
                     break;
                 case 2:
-                    if (GasPedal == true && BusSpeed < 0.12)
+                    if (GasPedal == true && BusSpeed < 0.12) //If UP is held, accelerate until top speed
                     {
                         BusSpeed += 0.01;
                     }
@@ -417,11 +420,11 @@ namespace DesertBusMode7
 
 
                     worldy += BusSpeed;
-                    worldx -= BusDrift;
+                    worldx -= BusDrift; //Apply the distance modifiers to your position
 
                     if (worldx > 0.72 || worldx < 0.28 || BusSpeed <= 0)
                     {
-                        GameState = 3;
+                        GameState = 3; //This means your Kart stalled and you lost :(
                     }
 
                     if (worldy < 0.00)
@@ -458,7 +461,7 @@ namespace DesertBusMode7
 
                     Mode7Render();           
                     break;
-                case 3:           
+                case 3:        
                     if (BusSpeed > 0.00)
                     {
                         BusSpeed -= 0.004;
@@ -477,7 +480,7 @@ namespace DesertBusMode7
                     {
                         BusDrift += 0.0001;
                     }
-                    switch (SpinoutFrame)
+                    switch (SpinoutFrame) //Sets the frame for the spinout depending on the previous one
                     {
                         case 0:
                             Sprite = Luigi;
@@ -512,7 +515,7 @@ namespace DesertBusMode7
                       
                     }
 
-                    if (BusSpeed <= 0)
+                    if (BusSpeed <= 0) //After the kart is stopped, the Lakitu animation starts
                     {
                         SpinoutFrame = -1;
                         BusDrift = 0;
@@ -532,7 +535,7 @@ namespace DesertBusMode7
                                 pBoxTransition.Left += 35;                           
                                 if (LakiY < 5 && pBoxTransition.Left >0)
                                 {
-                                    LakiAnim++;
+                                    LakiAnim++; //sets values back to what they should be at the start
                                     worldx = 0.5;
                                     worldy = 0.01;
                                     Sprite = Luigi;
@@ -593,7 +596,7 @@ namespace DesertBusMode7
                     }
               
                     Mode7Render();
-                    pBoxWin.Visible = true;
+                    pBoxWin.Visible = true; //Don't look at this its only for people who drive 8 hours
                     pBoxWin.Location = (new Point(551, -14));
 
                 
