@@ -178,4 +178,79 @@
   <data name="S9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\S9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Lakitu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lakitu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Big_Rigs_Over_the_Road_Racing_trophy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Big_Rigs_Over_the_Road_Racing_trophy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BowserCastleV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BowserCastleV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BowserCastleV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BowserCastleV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChocoMtV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChocoMtV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChocoMtV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChocoMtV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChocoMtV3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChocoMtV3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DesertV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DesertV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DesertV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DesertV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DesertV3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DesertV3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DonutPlainsMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DonutPlainsMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DonutPlainsV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DonutPlainsV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DonutPlainsV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DonutPlainsV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DonutPlainsV3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DonutPlainsV3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Finish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Finish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GhostValleyV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GhostValleyV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GhostValleyV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GhostValleyV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KoopaBeachV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KoopaBeachV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VanillaLakeV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VanillaLakeV1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VanillaLakeV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VanillaLakeV2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map_1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Map_Select" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Map Select.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Map_Viewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Map Viewer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SNES___Super_Mario_Kart___Track_Objects_1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SNES - Super Mario Kart - Track Objects(1).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
