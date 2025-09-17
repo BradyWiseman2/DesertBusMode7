@@ -19,3 +19,7 @@ W = Ascend
 S = Descend
 
 E and D are hard to explain, but they add a curvature to the world, try it out to see how that works.
+
+2025 update:
+I have made this repository public as I believe it to be a key part of the kind of programmer I am today. Lets be honest, there's so many lines of code in this that aren't the greatest,
+but being able to render 3D graphics within a windows form is still a crazy achievement in my eyes. This was one of the most fun projects I've worked on, not to mention the learning opportunities. One day, I'd like to go back and recreate this from scratch with some of the new skills I've learned, but for now, this project stands as my favourite example of being able to achieve literally anything you can think of through code so long as you put in the work.
